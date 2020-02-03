@@ -2,6 +2,7 @@
 	"name": "publishers",
 	"version": "0.0.0",
 	"description": "Provide a package name, get a list of every version, and who published it",
+	"bin": "./bin/publishers",
 	"main": "index.js",
 	"type": "commonjs",
 	"exports": {
@@ -45,5 +46,14 @@
 		"eslint": "^6.8.0",
 		"object-inspect": "^1.7.0",
 		"tape": "^5.0.0-next.4"
+	},
+	"dependencies": {
+		"object.fromentries": "^2.0.2",
+		"pacote": "^10.3.1",
+		"semver": "^7.1.2",
+		"yargs": "^15.1.0"
+	},
+	"engines": {
+		"node": "^13 || ^12 || ^11 || ^10"
 	}
 }

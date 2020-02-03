@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const getPublishers = require('..');
+
+const { argv: { _: [packageName], sort, json } } = require('yargs')
+	.command('*', require('../package').description, (yargs) => {
+		yargs.positional('package', {
+			describe: 'an npm package name: `[@scope/]package`',
+			required: true,
+		})
+		.demandCommand(1, 'Error: please provide a package name: `[@scope/]package`')
+		.option('json', {
+			describe: 'print out the result as JSON',
+			type: 'boolean',
+		})
+		.option('sort', {
+			choices: ['asc', 'desc'],
+			default: 'desc',
+			describe: 'sort results by version',
+		})
+	})
+	.strict()
+	.help();
+
+getPublishers(packageName, sort === 'asc').then((result) => {
+	if (json) {
+		console.log(result);
+	} else {
+		console.table(result);
+	}
+}).catch((e) => {
+	if (e.code === 'E404') {
+		console.error(e.message);
+		process.exitCode = 404;
+	} else {
+		console.error(e);
+		process.exitCode = /^\d+$/.test(e.code) ? e.code : 1;
+	}
+});
