@@ -14,6 +14,8 @@
 		"./package.json": "./package.json"
 	},
 	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -35,5 +37,9 @@
 	"bugs": {
 		"url": "https://github.com/ljharb/publishers/issues"
 	},
-	"homepage": "https://github.com/ljharb/publishers#readme"
+	"homepage": "https://github.com/ljharb/publishers#readme",
+	"devDependencies": {
+		"@ljharb/eslint-config": "^16.0.0",
+		"eslint": "^6.8.0"
+	}
 }
