@@ -17,6 +17,6 @@ module.exports = async function getPublishers(packageName, ascending = undefined
 	const packument = await pacote.packument(packageName, { fullMetadata: true });
 	const entries = Object.entries(packument.versions)
 		.map(([v, { _npmUser: u }]) => [`v${v}`, { ...u, created: packument.time[v] }])
-		.sort(void ascending === 'undefined' || ascending ? sortAsc : sortDesc);
+		.sort(ascending ? sortAsc : sortDesc);
 	return fromEntries(entries);
 };
