@@ -16,6 +16,7 @@
 	},
 	"scripts": {
 		"prepublish": "safe-publish-latest",
+		"prelint": "evalmd README.md",
 		"lint": "eslint .",
 		"pretest": "npm run lint",
 		"tests-only": "nyc tape test",
@@ -48,6 +49,7 @@
 		"@ljharb/eslint-config": "^16.0.0",
 		"auto-changelog": "^1.16.2",
 		"eslint": "^6.8.0",
+		"evalmd": "0.0.19",
 		"nyc": "^15.0.0",
 		"object-inspect": "^1.7.0",
 		"safe-publish-latest": "^1.1.4",
