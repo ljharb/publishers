@@ -2,6 +2,7 @@
 
 'use strict';
 
+const colorize = require('json-colorizer');
 const getPublishers = require('..');
 
 const { argv: { _: [packageName], sort, json } } = require('yargs')
@@ -26,7 +27,7 @@ const { argv: { _: [packageName], sort, json } } = require('yargs')
 
 getPublishers(packageName, sort === 'asc').then((result) => {
 	if (json) {
-		console.log(result);
+		console.log(colorize(JSON.stringify(result, null, '\t')));
 	} else {
 		console.table(result);
 	}
