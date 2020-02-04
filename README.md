@@ -19,6 +19,7 @@ Provide a package name, get a list of every version, and who published it.
 ┌─────────┬──────────┬────────────────────┬────────────────────────────┐
 │ (index) │   name   │       email        │          created           │
 ├─────────┼──────────┼────────────────────┼────────────────────────────┤
+│ v1.0.1  │ 'ljharb' │ 'ljharb@gmail.com' │ '2020-02-04T02:26:10.321Z' │
 │ v1.0.0  │ 'ljharb' │ 'ljharb@gmail.com' │ '2020-02-03T21:34:48.957Z' │
 └─────────┴──────────┴────────────────────┴────────────────────────────┘
 ```
@@ -26,11 +27,32 @@ Provide a package name, get a list of every version, and who published it.
 ```console
 > publishers publishers --json
 {
-  'v1.0.0': {
-    name: 'ljharb',
-    email: 'ljharb@gmail.com',
-    created: '2020-02-03T21:34:48.957Z'
-  }
+	"v1.0.1": {
+		"name": "ljharb",
+		"email": "ljharb@gmail.com",
+		"created": "2020-02-04T02:26:10.321Z"
+	},
+	"v1.0.0": {
+		"name": "ljharb",
+		"email": "ljharb@gmail.com",
+		"created": "2020-02-03T21:34:48.957Z"
+	}
+}
+```
+
+```console
+> publishers publishers --json --sort=asc
+{
+	"v1.0.0": {
+		"name": "ljharb",
+		"email": "ljharb@gmail.com",
+		"created": "2020-02-03T21:34:48.957Z"
+	},
+	"v1.0.1": {
+		"name": "ljharb",
+		"email": "ljharb@gmail.com",
+		"created": "2020-02-04T02:26:10.321Z"
+	}
 }
 ```
 
