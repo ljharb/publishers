@@ -59,7 +59,7 @@
 	"dependencies": {
 		"json-colorizer": "^2.2.1",
 		"object.fromentries": "^2.0.2",
-		"pacote": "^11.1.4",
+		"pacote": "~10.1.6",
 		"semver": "^7.2.3",
 		"yargs": "~15.3.1"
 	},
