@@ -1,6 +1,5 @@
 # publishers <sup>[![Version Badge][2]][1]</sup>
 
-[![Build Status][3]][4]
 [![dependency status][5]][6]
 [![dev dependency status][7]][8]
 [![License][license-image]][license-url]
@@ -74,9 +73,7 @@ const results = getPublishers('publishers').then((results) => {
 ```
 
 [1]: https://npmjs.org/package/publishers
-[2]: http://versionbadg.es/ljharb/publishers.svg
-[3]: https://travis-ci.com/ljharb/publishers.svg
-[4]: https://travis-ci.com/ljharb/publishers
+[2]: https://versionbadg.es/ljharb/publishers.svg
 [5]: https://david-dm.org/ljharb/publishers.svg
 [6]: https://david-dm.org/ljharb/publishers
 [7]: https://david-dm.org/ljharb/publishers/dev-status.svg
