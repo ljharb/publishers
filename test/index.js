@@ -8,7 +8,7 @@ const getPublishers = require('..');
 
 // eslint-disable-next-line max-params
 Test.prototype.rejects = function (fn, expected, msg, extra) {
-	return new Promise((resolve) => resolve(fn())).then(
+	return new Promise((resolve) => { resolve(fn()); }).then(
 		() => {
 			throw new SyntaxError('expected promise to reject; it fulfilled');
 		},
