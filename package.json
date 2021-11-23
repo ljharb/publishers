@@ -58,9 +58,9 @@
 	},
 	"dependencies": {
 		"json-colorizer": "^2.2.2",
-		"object.fromentries": "^2.0.3",
+		"object.fromentries": "^2.0.5",
 		"pacote": "~10.1.6",
-		"semver": "^7.3.4",
+		"semver": "^7.3.5",
 		"yargs": "~15.3.1"
 	},
 	"engines": {
