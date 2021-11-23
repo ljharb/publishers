@@ -20,9 +20,9 @@ const { argv: { _: [packageName], sort, json } } = require('yargs')
 			choices: ['asc', 'desc'],
 			default: 'desc',
 			describe: 'sort results by version',
-		})
+		});
 	})
-	.strict()
+	.strictOptions()
 	.help();
 
 getPublishers(packageName, sort === 'asc').then((result) => {
