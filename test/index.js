@@ -56,7 +56,7 @@ test('arguments', async (t) => {
 });
 
 test('known package', async (t) => {
-	var pkg = 'just-next-tick';
+	const pkg = 'just-next-tick';
 	const [
 		noSort,
 		desc,

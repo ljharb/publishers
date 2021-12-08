@@ -1,40 +1,5 @@
 {
 	"root": true,
 
-	"extends": "@ljharb",
-
-	"parserOptions": {
-		"ecmaVersion": "2020",
-	},
-
-	"env": {
-		"es6": true,
-	},
-
-	"rules": {
-		//"array-bracket-newline": 0,
-		"comma-dangle": [2, "always-multiline"],
-		"dot-notation": [2, { "allowKeywords": true }],
-		//"func-style": 1,
-		//"max-lines-per-function": [2, 70],
-		//"max-params": [2, 5],
-		//"max-nested-callbacks": [2, 4],
-		//"no-console": 0,
-		//"object-curly-newline": 0,
-		"object-shorthand": [2, "always"],
-		"operator-linebreak": [2, "before"],
-		"quote-props": [2, "as-needed", {
-			"keywords": false,
-			"unnecessary": true,
-			"numbers": false,
-		}],
-	},
-
-	"overrides": [
-		{
-			"files": "test/**",
-			"rules": {
-			},
-		},
-	],
+	"extends": "@ljharb/eslint-config/node/10",
 }
