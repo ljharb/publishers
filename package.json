@@ -58,7 +58,7 @@
 	"dependencies": {
 		"json-colorizer": "^2.2.2",
 		"object.fromentries": "^2.0.5",
-		"pacote": "^12.0.3",
+		"pacote": "=13.6.0",
 		"semver": "^7.3.8",
 		"yargs": "^17.6.0"
 	},
