@@ -58,9 +58,9 @@
 	"dependencies": {
 		"json-colorizer": "^2.2.2",
 		"object.fromentries": "^2.0.5",
-		"pacote": "^12.0.2",
-		"semver": "^7.3.5",
-		"yargs": "^17.3.1"
+		"pacote": "^12.0.3",
+		"semver": "^7.3.8",
+		"yargs": "^17.6.0"
 	},
 	"engines": {
 		"node": ">= 17 || ^16 || ^14.15 || ^12.13"
