@@ -57,10 +57,10 @@
 	},
 	"dependencies": {
 		"json-colorizer": "^2.2.2",
-		"object.fromentries": "^2.0.5",
-		"pacote": "=13.6.0",
+		"object.fromentries": "^2.0.6",
+		"pacote": "^13.6.2",
 		"semver": "^7.3.8",
-		"yargs": "^17.6.0"
+		"yargs": "^17.6.2"
 	},
 	"engines": {
 		"node": ">= 17 || ^16 || ^14.15 || ^12.13"
