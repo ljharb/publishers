@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.0.1](https://github.com/ljharb/publishers/compare/v2.0.0...v2.0.1) - 2022-12-19
+
+### Commits
+
+- [meta] use `npmignore` to autogenerate an npmignore file [`e6cf3df`](https://github.com/ljharb/publishers/commit/e6cf3dfae9a383e34f490ca6230cef8a8d5ab544)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `auto-changelog`, `object-inspect`, `tape` [`20bb0c0`](https://github.com/ljharb/publishers/commit/20bb0c07385c270a68454a6bd99e56b65bbeee87)
+- [actions] update rebase action [`2b69197`](https://github.com/ljharb/publishers/commit/2b691970d334c7a3cb43f428e18cd4f3882248e9)
+- [Deps] unpin `pacote`, update `object.fromentries`, `yargs` [`322316a`](https://github.com/ljharb/publishers/commit/322316a650726789b0b3c1c93ba14f15fe63e988)
+- [Deps] update `pacote`, `semver`, `yargs` [`15c810e`](https://github.com/ljharb/publishers/commit/15c810e117d5621c9aafda8fe99d1018208d27a5)
+- [meta] clean up changelog [`b943f99`](https://github.com/ljharb/publishers/commit/b943f998e4408c69d0c5193436f58544acee68a0)
+- [Dev Deps] update `aud` [`fab1b01`](https://github.com/ljharb/publishers/commit/fab1b01f48a97d2d19d3f1d9fb98a2fbd7093ab3)
+- [Deps] update `pacote` [`ba84283`](https://github.com/ljharb/publishers/commit/ba84283aaabcdf253f64172fb4784819bcc1597e)
+
 ## [v2.0.0](https://github.com/ljharb/publishers/compare/v1.0.4...v2.0.0) - 2022-01-20
 
 ### Commits

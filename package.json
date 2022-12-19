@@ -1,6 +1,6 @@
 {
 	"name": "publishers",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Provide a package name, get a list of every version, and who published it",
 	"bin": "./bin/publishers",
 	"main": "index.js",
