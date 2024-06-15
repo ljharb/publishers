@@ -1,13 +1,12 @@
 'use strict';
 
 const test = require('tape');
-const Test = require('tape/lib/test');
 const inspect = require('object-inspect');
 
 const getPublishers = require('..');
 
-// eslint-disable-next-line max-params
-Test.prototype.rejects = function (fn, expected, msg, extra) {
+const rejects = function assertRejects(fn, expected, msg, extra) {
+	/* eslint no-invalid-this: 0 */
 	return new Promise((resolve) => { resolve(fn()); }).then(
 		() => {
 			throw new SyntaxError('expected promise to reject; it fulfilled');
@@ -19,7 +18,7 @@ Test.prototype.rejects = function (fn, expected, msg, extra) {
 };
 
 test('arguments', async (t) => {
-	await t.rejects(() => getPublishers(), TypeError, 'first argument must be a string');
+	await t.assertion(rejects, () => getPublishers(), TypeError, 'first argument must be a string');
 
 	await Promise.all([
 		undefined,
@@ -31,7 +30,8 @@ test('arguments', async (t) => {
 		Infinity,
 		{},
 		[],
-	].map((nonString) => t.rejects(
+	].map((nonString) => t.assertion(
+		rejects,
 		() => getPublishers(nonString),
 		TypeError,
 		`first argument must be a string, got ${inspect(nonString)}`,
@@ -48,7 +48,8 @@ test('arguments', async (t) => {
 		'true',
 		[],
 		{},
-	].map((nonBoolean) => t.rejects(
+	].map((nonBoolean) => t.assertion(
+		rejects,
 		() => getPublishers('foo', nonBoolean),
 		TypeError,
 		`second argument must be a boolean, got ${inspect(nonBoolean)}`,
